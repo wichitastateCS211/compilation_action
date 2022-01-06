@@ -1,0 +1,11 @@
+name: 'Code Compilation'
+description: 'Sets up C++ environment and compiles a single cpp file.'
+inputs:
+  file-to-build:
+    description: 'The name of the cpp file to be built'
+    required: true
+runs:
+  using: 'docker'
+  imgae: 'Dockerfile'
+  args:
+    - ${{ inputs.file-to-build }}
